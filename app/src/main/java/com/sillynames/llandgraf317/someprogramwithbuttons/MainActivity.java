@@ -8,6 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,6 +28,16 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+    }
+
+    public void onClickChangeText(
+            final View butTurt
+    ) {
+        TextView textMud = (TextView) findViewById(R.id.textView);
+        textMud.setText("I liek turtlez!");
+
+        Button but = (Button) findViewById(R.id.but_turt);
+        but.setText("Now I am fine.");
     }
 
     @Override
