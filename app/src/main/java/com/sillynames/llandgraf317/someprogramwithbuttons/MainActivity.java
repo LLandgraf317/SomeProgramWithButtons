@@ -13,6 +13,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    int counter = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,11 +35,18 @@ public class MainActivity extends AppCompatActivity {
     public void onClickChangeText(
             final View butTurt
     ) {
+        TextView textcounter = (TextView) findViewById(R.id.happiness_counter);
         TextView textMud = (TextView) findViewById(R.id.textView);
-        textMud.setText("I liek turtlez!");
 
-        Button but = (Button) findViewById(R.id.but_turt);
-        but.setText("Now I am fine.");
+        counter++;
+        textcounter.setText(((Integer) counter).toString());
+
+        if(counter==20)
+            textMud.setText("Mad motherfucker");
+
+
+        //Button but = (Button) findViewById(R.id.but_turt);
+        //but.setText(R.string.being_fine);
     }
 
     @Override

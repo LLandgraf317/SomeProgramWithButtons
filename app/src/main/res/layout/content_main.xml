@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="I liek mudkipz"
+        android:text="@string/liking_mudkips"
         android:id="@+id/textView"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
@@ -25,10 +25,29 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="But I liek turtlez"
+        android:text="@string/add_moment"
         android:id="@+id/but_turt"
-        android:layout_marginTop="192dp"
-        android:layout_below="@+id/textView"
+        android:onClick="onClickChangeText"
+        android:layout_below="@+id/happiness_counter"
         android:layout_centerHorizontal="true"
-        android:onClick="onClickChangeText" />
+        android:layout_marginTop="131dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/happy_moments"
+        android:id="@+id/text_succ"
+        android:layout_marginTop="98dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:id="@+id/happiness_counter"
+        android:layout_below="@+id/text_succ"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
